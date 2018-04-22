@@ -35,11 +35,23 @@ class ProductCatalog extends Component {
     }
 
     updateProduct(product) {
+        console.log('Update product' + product);
+        let products = this.state.products;
+        products = products.map((p, i) => {
+            if(i == product.i) {
+                p.name = product.name;
+                p.price = product.price;
+            }
+            return p;
+        });
 
+        this.setState({products});
     }
 
-    deleteProduct(product) {
-
+    deleteProduct(i) {
+        const { products } = this.state;
+        const filteredProducts = products.filter( (product, key) => (key == i ? false : true) );
+        this.setState({products: filteredProducts});
     }
 
     render() {
@@ -49,7 +61,7 @@ class ProductCatalog extends Component {
                 <h1>Product Catalog</h1>
                 <br/>
                 <ProductForm createProduct = {this.createProduct} />
-                <ProductList products={this.state.products} />
+                <ProductList deleteProduct={this.deleteProduct} updateProduct={this.updateProduct} products={this.state.products} />
             </div>
 
         );
