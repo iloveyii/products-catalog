@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import ProductCatalog from './ProductCatalog';
+import ProductCatalog from './Components/Product/ProductCatalog';
 
 import logo from './logo.svg';
 import './App.css';
@@ -18,7 +18,7 @@ class App extends Component {
                     <ProductCatalog />
                 </div>
 
-                <footer><p>This is footer.</p></footer>
+                <footer></footer>
             </div>
         );
     }

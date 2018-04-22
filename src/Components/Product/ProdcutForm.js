@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
     name : PropTypes.string.isRequired,
-    price : PropTypes.number.isRequired
+    price : PropTypes.number.isRequired,
+    createProduct : PropTypes.func.isRequired
 };
 
 const defaultProps = {
@@ -20,20 +21,27 @@ class ProductForm extends Component {
 
     handleOnSubmit(event) {
         event.preventDefault();
-        console.log('In handle on submit');
+        const { createProduct } = this.props ;
+        if(this.nameInput.value !== 'undefined' && this.priceInput.value !== 'undefined') {
+            createProduct({name: this.nameInput.value, price: this.priceInput.value});
+            this.nameInput.value = '';
+            this.priceInput.value = '';
+            this.nameInput.focus();
+        }
+
     }
 
     render() {
         return(
             <div className="row">
                 <div className="col-sm-10 offset-sm-1 text-center">
-                    <h1 className="col-12">Products Catalog</h1>
+                    <h2 className="col-12">Product Form</h2>
                     <form className="form-inline justify-content-center" onSubmit={this.handleOnSubmit}>
                         <div className="form-group mb-2">
-                            <input type="text" className="form-control" placeholder="Enter product name" ref={} />
+                            <input type="text" className="form-control" placeholder="Enter product name" ref={nameInput => this.nameInput = nameInput} />
                         </div>
                         <div className="form-group mx-sm-3 mb-2">
-                            <input type="text" className="form-control" placeholder="Enter product price"/>
+                            <input type="text" className="form-control" placeholder="Enter product price" ref={priceInput => this.priceInput = priceInput} />
                         </div>
                         <button className="btn btn-primary mb-2">Add</button>
                     </form>
