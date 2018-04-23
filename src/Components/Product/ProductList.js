@@ -30,6 +30,14 @@ class ProductList extends Component {
                     <h2 className="col-12">Products List</h2>
                     <div>
                         <ul className="list-group">
+                            <li className="list-group-item list-group-item-success">
+                                <div className="form-inline">
+                                    <div className="col-sm"><strong>Item</strong></div>
+                                    <div className="col-sm"><strong>Price</strong></div>
+                                    <div className="col-sm text-center"><i className="fas fa-cogs"></i></div>
+                                </div>
+
+                            </li>
                             {this.props.products.map( (product, i)  => (
                                 <ProductItem key={i} i={i} product={product} onDelete={this.onDelete} onUpdate={this.onUpdate} />
                             ))}

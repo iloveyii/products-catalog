@@ -12,9 +12,20 @@ const defaultProps = {
         {
             name: 'iPhone',
             price: 85
+        },
+        {
+            name: 'MacBook Pro',
+            price: 550
         }
     ]
 };
+
+if(localStorage.products) {
+    const products = JSON.parse( localStorage.getItem('products') );
+    defaultProps.products = products;
+} else {
+    localStorage.setItem('products', JSON.stringify(defaultProps.products));
+}
 
 
 class ProductCatalog extends Component {
@@ -31,7 +42,7 @@ class ProductCatalog extends Component {
         const { products }= this.state;
         products.push(product);
         this.setState({ products});
-
+        localStorage.setItem('products', JSON.stringify(products));
     }
 
     updateProduct(product) {
@@ -46,6 +57,7 @@ class ProductCatalog extends Component {
         });
 
         this.setState({products});
+        localStorage.setItem('products', JSON.stringify(products));
     }
 
     deleteProduct(i) {
