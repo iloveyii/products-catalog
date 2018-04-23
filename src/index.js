@@ -5,6 +5,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 import { combineReducers, createStore } from 'redux';
+import { Provider } from 'react-redux';
 
 // # 01
 /**
@@ -67,5 +68,9 @@ const updateUserAction = {
 store.dispatch(updateUserAction);
 console.log(store.getState());
 
-ReactDOM.render(<App />, document.getElementById('root'));
+/**
+ * Interestingly a newline before Provider, App causes errors
+ */
+ReactDOM.render(<Provider store={store}><App /></Provider>,
+    document.getElementById('root'));
 registerServiceWorker();
