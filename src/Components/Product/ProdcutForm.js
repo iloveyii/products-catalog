@@ -35,7 +35,6 @@ class ProductForm extends Component {
         return(
             <div className="row">
                 <div className="col-sm-10 offset-sm-1 text-center">
-                    <h2 className="col-12">Product Form</h2>
                     <form className="form-inline justify-content-center" onSubmit={this.handleOnSubmit}>
                         <div className="form-group mb-2">
                             <input type="text" className="form-control" placeholder="Enter product name" ref={nameInput => this.nameInput = nameInput} />

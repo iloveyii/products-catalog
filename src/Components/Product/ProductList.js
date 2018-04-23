@@ -27,7 +27,6 @@ class ProductList extends Component {
         return(
             <div className="row">
                 <div className="col-sm-10 offset-sm-1 text-left">
-                    <h2 className="col-12">Products List</h2>
                     <div>
                         <ul className="list-group">
                             <li className="list-group-item list-group-item-success">
