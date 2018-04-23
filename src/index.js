@@ -22,7 +22,7 @@ import UserReducer from './Reducers/UserReducer';
  * Action is an object with format of type and payload
  * @type {{type: string, payload: {newState: string}}}
  */
-import UpdateUserAction from './Actions/UserActions';
+import { UserUpdateAction } from './Actions/UserActions';
 
 const allReducers = combineReducers({
     products: ProductsReducer,
@@ -53,7 +53,7 @@ console.log(store.getState());
 /**
  * Dispatch action to store
  */
-store.dispatch(UpdateUserAction);
+// store.dispatch(UserUpdateAction);
 console.log(store.getState());
 
 /**
