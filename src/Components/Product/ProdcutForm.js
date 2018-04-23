@@ -22,7 +22,7 @@ class ProductForm extends Component {
     handleOnSubmit(event) {
         event.preventDefault();
         const { createProduct } = this.props ;
-        if(this.nameInput.value !== 'undefined' && this.priceInput.value !== 'undefined') {
+        if( this.nameInput.value.length && this.priceInput.value.length ) {
             createProduct({name: this.nameInput.value, price: this.priceInput.value});
             this.nameInput.value = '';
             this.priceInput.value = '';
