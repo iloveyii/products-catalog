@@ -16,20 +16,19 @@ import { Provider } from 'react-redux';
  * @param action
  * @returns {Array} - every return value is assigned to the corresponding key in allReducers
  */
-const productsReducer = (state=[], action) => {
-    return state;
-};
-const userReducer = (state = '', action) => {
-    if(action.type === 'updateUser') {
-        console.log('inside reducer user: ' , state);
-        return action.payload.user;
-    }
-    return state;
-};
+import ProductsReducer from './Reducers/ProductsReducer';
+import UserReducer from './Reducers/UserReducer';
+/**
+ * Action is an object with format of type and payload
+ * @type {{type: string, payload: {newState: string}}}
+ */
+import UpdateUserAction from './Actions/UserActions';
+
 const allReducers = combineReducers({
-    products: productsReducer,
-    user: userReducer
+    products: ProductsReducer,
+    user: UserReducer
 });
+
 
 // # 02
 /**
@@ -50,22 +49,11 @@ const store = createStore(allReducers,
  */
 console.log(store.getState());
 
-/**
- * Action is an object with format of type and payload
- * @type {{type: string, payload: {newState: string}}}
- */
-const updateUserAction = {
-    type: 'updateUser',
-    payload: {
-        user: 'Alex Kan'
-    }
-};
-
 // # 03
 /**
  * Dispatch action to store
  */
-store.dispatch(updateUserAction);
+store.dispatch(UpdateUserAction);
 console.log(store.getState());
 
 /**
