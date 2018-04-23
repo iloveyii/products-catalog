@@ -64,6 +64,7 @@ class ProductCatalog extends Component {
         const { products } = this.state;
         const filteredProducts = products.filter( (product, key) => (key == i ? false : true) );
         this.setState({products: filteredProducts});
+        localStorage.setItem('products', JSON.stringify(filteredProducts));
     }
 
     render() {
