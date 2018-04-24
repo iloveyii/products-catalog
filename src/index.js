@@ -4,8 +4,10 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-import { combineReducers, createStore } from 'redux';
+import { applyMiddleware, compose, combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import logger from 'redux-logger';
 
 // # 01
 /**
@@ -22,12 +24,15 @@ import UserReducer from './Reducers/UserReducer';
  * Action is an object with format of type and payload
  * @type {{type: string, payload: {newState: string}}}
  */
-import { UserUpdateAction } from './Actions/UserActions';
-
 const allReducers = combineReducers({
     products: ProductsReducer,
     user: UserReducer
 });
+
+const allStoreEnhancers = compose(
+    applyMiddleware(thunk, logger),
+    window.devToolsExtension && window.devToolsExtension()
+);
 
 let products = [
     {
@@ -65,8 +70,9 @@ const store = createStore(allReducers,
         products,
         user: 'Ali'
     },
-    window.devToolsExtension && window.devToolsExtension()
+    allStoreEnhancers
 );
+
 /**
  * You can see the status of store - but only data and not reducers
  */

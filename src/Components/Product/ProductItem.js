@@ -36,7 +36,7 @@ class ProductItem extends Component {
     }
 
     render() {
-        const { i, product, onDelete } = this.props;
+        const { i, product } = this.props;
         return (
             this.state.isEdit
                 ? (

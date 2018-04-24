@@ -4,9 +4,6 @@ import ProductForm from './ProdcutForm';
 import ProductList from './ProductList';
 
 class ProductCatalog extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return(
