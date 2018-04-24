@@ -1,13 +1,15 @@
+
 const ProductsReducer = (state=[], action) => {
-    console.log('ProductsReducer Inside', action);
-    let products = state;
+    let products = state.slice(0);
 
     switch (action.type) {
         case 'Product.Create':
-            console.log('inside reducer products: Product.Create :', state);
+            const lastProduct = products[products.length - 1];
+            const productArray = [{...action.payload.product, i : lastProduct.i + 1}];
+            const productAdded = products.concat(productArray);
+            localStorage.setItem('products', JSON.stringify(productAdded));
 
-            products.push(action.payload.product);
-            return products;
+            return productAdded;
 
         case 'Product.Update':
             console.log('inside reducer products: Product.Update: ', state);
@@ -21,6 +23,7 @@ const ProductsReducer = (state=[], action) => {
                 products[index].price = action.payload.product.price;
             }
 
+            localStorage.setItem('products', JSON.stringify(products));
             return products;
 
         case 'Product.Delete':

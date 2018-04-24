@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
+import { ProductCreateAction, ProductUpdateAction, ProductDeleteAction } from '../../Actions/ProductActions';
 
 
 const propTypes = {
     name : PropTypes.string.isRequired,
     price : PropTypes.number.isRequired,
-    createProduct : PropTypes.func.isRequired
+    ProductCreateAction : PropTypes.func.isRequired
 };
 
 const defaultProps = {
@@ -21,9 +24,10 @@ class ProductForm extends Component {
 
     handleOnSubmit(event) {
         event.preventDefault();
-        const { createProduct } = this.props ;
+        const { ProductCreateAction } = this.props ;
         if( this.nameInput.value.length && this.priceInput.value.length ) {
-            createProduct({name: this.nameInput.value, price: this.priceInput.value});
+            ProductCreateAction({name: this.nameInput.value, price: this.priceInput.value});
+
             this.nameInput.value = '';
             this.priceInput.value = '';
             this.nameInput.focus();
@@ -54,4 +58,15 @@ class ProductForm extends Component {
 ProductForm.propTypes = propTypes;
 ProductForm.defaultProps = defaultProps;
 
-export default ProductForm;
+const mapStateToProps = state => (
+    {
+
+    }
+);
+const mapActionsToProps = {
+    ProductCreateAction,
+    ProductUpdateAction,
+    ProductDeleteAction
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(ProductForm);

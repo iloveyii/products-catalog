@@ -2,7 +2,7 @@ export const ProductCreateAction = newProduct => {
     return {
         type: 'Product.Create',
         payload: {
-            newProduct: newProduct
+            product: newProduct
         }
     }
 };

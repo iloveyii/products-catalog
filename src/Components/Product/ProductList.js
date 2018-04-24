@@ -8,20 +8,6 @@ class ProductList extends Component {
 
     constructor(props) {
         super(props);
-        this.onDelete = this.onDelete.bind(this);
-        this.onUpdate = this.onUpdate.bind(this);
-    }
-
-    onDelete(i) {
-        console.log(i);
-        const { deleteProduct } = this.props;
-        deleteProduct(i);
-    }
-
-    onUpdate(product) {
-        console.log(product);
-        const { updateProduct } = this.props;
-        updateProduct(product);
     }
 
     render() {
@@ -39,7 +25,7 @@ class ProductList extends Component {
 
                             </li>
                             {this.props.products.map( (product)  => (
-                                <ProductItem key={product.i} i={product.i} product={product} onDelete={this.onDelete} onUpdate={this.onUpdate} />
+                                <ProductItem key={product.i} i={product.i} product={product} />
                             ))}
                         </ul>
                     </div>
