@@ -1,8 +1,19 @@
+import axios from 'axios';
+
 export const ProductCreateAction = newProduct => {
     return {
         type: 'Product.Create',
         payload: {
             product: newProduct
+        }
+    }
+};
+
+export const ProductReadAction = products => {
+    return {
+        type: 'Product.Read',
+        payload: {
+            products: products
         }
     }
 };
@@ -22,5 +33,16 @@ export const ProductDeleteAction = product => {
         payload: {
             product: product
         }
+    }
+};
+
+export const apiRequest  = () => {
+    const request = axios.get('http://localhost:3000/data.json');
+    return dispatch => {
+        request.then((response)=>{
+            dispatch(
+                ProductReadAction(response.data)
+            );
+        });
     }
 };

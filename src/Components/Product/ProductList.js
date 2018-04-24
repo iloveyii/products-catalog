@@ -2,9 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import ProductItem from './ProductItem';
+import { apiRequest } from '../../Actions/ProductActions';
+
 
 
 class ProductList extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        const { apiRequest } = this.props;
+        apiRequest();
+    }
 
     render() {
         return(
@@ -34,5 +44,9 @@ const mapStateToProps = state => (
     {
         products: state.products
     }
-)
-export default connect(mapStateToProps)(ProductList);
+);
+
+const mapActionsToProps = {
+    apiRequest
+};
+export default connect(mapStateToProps, mapActionsToProps)(ProductList);

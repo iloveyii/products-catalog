@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { ProductCreateAction, ProductUpdateAction, ProductDeleteAction } from '../../Actions/ProductActions';
+import { ProductCreateAction, ProductUpdateAction, ProductDeleteAction, apiRequest } from '../../Actions/ProductActions';
 
 
 class ProductItem extends Component {
@@ -24,10 +24,12 @@ class ProductItem extends Component {
 
     onSave(event) {
         event.preventDefault();
-        const { ProductUpdateAction, product } = this.props;
+        const { ProductUpdateAction, product, apiRequest } = this.props;
         const updatedProduct = {name:this.nameInput.value, price: this.priceInput.value,i:product.i};
         ProductUpdateAction(updatedProduct);
         this.setState({isEdit:false});
+        console.log('Calling apiRequest');
+
     }
 
     onDelete() {
@@ -80,7 +82,8 @@ const mapStateToProps = state => (
 const mapActionsToProps = {
     ProductCreateAction,
     ProductUpdateAction,
-    ProductDeleteAction
+    ProductDeleteAction,
+    apiRequest
 };
 
 export default connect(mapStateToProps, mapActionsToProps)(ProductItem);

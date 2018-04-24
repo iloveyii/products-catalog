@@ -11,6 +11,9 @@ const ProductsReducer = (state=[], action) => {
 
             return productAdded;
 
+        case 'Product.Read':
+            return action.payload.products.slice(0);
+
         case 'Product.Update':
             // find the index of product that needs to be updated
             const index = products.findIndex( product => {
