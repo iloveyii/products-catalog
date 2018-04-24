@@ -30,7 +30,7 @@ class App extends Component {
                     <ProductCatalog products={this.props.products} />
                 </div>
 
-                <footer><button onClick={this.update}>Update user </button></footer>
+                <footer></footer>
             </div>
         );
     }

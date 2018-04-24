@@ -39,7 +39,23 @@ const allReducers = combineReducers({
  */
 const store = createStore(allReducers,
     {
-        products: [{name: 'iPhone', price: 45}, {name: 'HP ProBook', price: 430}],
+        products: [
+            {
+                i: 0,
+                name: 'iPad',
+                price: 75
+            },
+            {
+                i: 1,
+                name: 'iPhone',
+                price: 85
+            },
+            {
+                i: 2,
+                name: 'MacBook Pro',
+                price: 550
+            }
+        ],
         user: 'Ali'
     },
     window.devToolsExtension && window.devToolsExtension()

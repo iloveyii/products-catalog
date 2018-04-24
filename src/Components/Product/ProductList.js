@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import ProductItem from './ProductItem';
 
@@ -37,8 +38,8 @@ class ProductList extends Component {
                                 </div>
 
                             </li>
-                            {this.props.products.map( (product, i)  => (
-                                <ProductItem key={i} i={i} product={product} onDelete={this.onDelete} onUpdate={this.onUpdate} />
+                            {this.props.products.map( (product)  => (
+                                <ProductItem key={product.i} i={product.i} product={product} onDelete={this.onDelete} onUpdate={this.onUpdate} />
                             ))}
                         </ul>
                     </div>
@@ -47,5 +48,9 @@ class ProductList extends Component {
         )
     }
 }
-
-export default ProductList;
+const mapStateToProps = state => (
+    {
+        products: state.products
+    }
+)
+export default connect(mapStateToProps)(ProductList);

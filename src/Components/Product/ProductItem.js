@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import { ProductCreateAction, ProductUpdateAction, ProductDeleteAction } from '../../Actions/ProductActions';
 
 
 class ProductItem extends Component {
@@ -8,6 +11,7 @@ class ProductItem extends Component {
         this.onEdit = this.onEdit.bind(this);
         this.onCancel = this.onCancel.bind(this);
         this.onSave = this.onSave.bind(this);
+        this.onDelete = this.onDelete.bind(this);
     }
 
     onEdit() {
@@ -20,25 +24,21 @@ class ProductItem extends Component {
 
     onSave(event) {
         event.preventDefault();
-        const { onUpdate } = this.props;
+        const { Product } = this.props;
         const product = {name:this.nameInput.value, price: this.priceInput.value,i:this.props.i};
         console.log(product);
-        onUpdate(product);
+        // onUpdate(product);
+
         this.setState({isEdit:false});
     }
 
-    showFormControls() {
-        const { onDelete } = this.props;
-        return <div className="col-sm text-right">
-            <button onClick={this.onEdit} className="btn btn-success mx-sm-3 mb-2">Edit</button>
-            <button onClick={ ()=>onDelete(this.props.i) } className="btn btn-danger mx-sm-3 mb-2">Delete</button>
-        </div>
+    onDelete() {
+        const { ProductDeleteAction, product } =  this.props;
+        ProductDeleteAction(product);
     }
 
-
-
     render() {
-        const { i, product } = this.props;
+        const { i, product, onDelete } = this.props;
         return (
             this.state.isEdit
                 ? (
@@ -62,7 +62,10 @@ class ProductItem extends Component {
                         <div className="form-inline" onSubmit={this.handleOnSubmit}>
                         <div className="col-sm">{ product.name }</div>
                         <div className="col-sm">{product.price}</div>
-                        { this.showFormControls() }
+                        <div className="col-sm text-right">
+                            <button onClick={this.onEdit} className="btn btn-success mx-sm-3 mb-2">Edit</button>
+                            <button onClick={ this.onDelete } className="btn btn-danger mx-sm-3 mb-2">Delete</button>
+                        </div>
                         </div>
                     </li>
                 )
@@ -70,4 +73,16 @@ class ProductItem extends Component {
     }
 }
 
-export default ProductItem;
+const mapStateToProps = state => (
+    {
+        products: state.products,
+        user: state.user
+    }
+);
+const mapActionsToProps = {
+    ProductCreateAction,
+    ProductUpdateAction,
+    ProductDeleteAction
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(ProductItem);
