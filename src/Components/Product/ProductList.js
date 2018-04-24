@@ -24,8 +24,8 @@ class ProductList extends Component {
                                 </div>
 
                             </li>
-                            {this.props.products.map( (product)  => (
-                                <ProductItem key={product.i} i={product.i} product={product} />
+                            {this.props.products.map( product => (
+                                <ProductItem key={product.i} product={product} />
                             ))}
                         </ul>
                     </div>

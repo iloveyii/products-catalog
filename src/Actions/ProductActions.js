@@ -17,7 +17,6 @@ export const ProductUpdateAction = newProduct => {
 };
 
 export const ProductDeleteAction = product => {
-    console.log('Inside ProductDeleteAction', product);
     return {
         type: 'Product.Delete',
         payload: {

@@ -12,7 +12,6 @@ const ProductsReducer = (state=[], action) => {
             return productAdded;
 
         case 'Product.Update':
-            console.log('inside reducer products: Product.Update: ', state);
             // find the index of product that needs to be updated
             const index = products.findIndex( product => {
                 return product.i == action.payload.product.i

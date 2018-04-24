@@ -70,14 +70,13 @@ const store = createStore(allReducers,
 /**
  * You can see the status of store - but only data and not reducers
  */
-console.log(store.getState());
+// console.log(store.getState());
 
 // # 03
 /**
  * Dispatch action to store
  */
 // store.dispatch(UserUpdateAction);
-console.log(store.getState());
 
 /**
  * Interestingly a newline before Provider, App causes errors
