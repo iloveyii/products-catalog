@@ -7,9 +7,9 @@ const ProductsReducer = (state=[], action) => {
         case 'Product.Delete':
             console.log('Product.Delete', state);
             const products  = state;
-            const filteredProducts = products.filter( (product, key) => (key == action.payload.product.i ? false : true) );
+            const filteredProducts = products.filter( (product, key) => (product.i == action.payload.product.i ? false : true) );
             localStorage.setItem('products', JSON.stringify(filteredProducts));
-            console.log('filteredProducts', filteredProducts);
+            console.log('filteredProducts: ', filteredProducts);
             console.log('inside reducer products: ', state);
             return filteredProducts;
         default:
