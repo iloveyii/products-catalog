@@ -11,7 +11,7 @@ export const ProductUpdateAction = newProduct => {
     return {
         type: 'Product.Update',
         payload: {
-            newProduct: newProduct
+            product: newProduct
         }
     }
 };

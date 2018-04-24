@@ -24,11 +24,9 @@ class ProductItem extends Component {
 
     onSave(event) {
         event.preventDefault();
-        const { Product } = this.props;
-        const product = {name:this.nameInput.value, price: this.priceInput.value,i:this.props.i};
-        console.log(product);
-        // onUpdate(product);
-
+        const { ProductUpdateAction, product } = this.props;
+        const updatedProduct = {name:this.nameInput.value, price: this.priceInput.value,i:product.i};
+        ProductUpdateAction(updatedProduct);
         this.setState({isEdit:false});
     }
 

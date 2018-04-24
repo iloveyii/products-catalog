@@ -29,6 +29,29 @@ const allReducers = combineReducers({
     user: UserReducer
 });
 
+let products = [
+    {
+        i: 0,
+        name: 'iPad',
+        price: 75
+    },
+    {
+        i: 1,
+        name: 'iPhone',
+        price: 85
+    },
+    {
+        i: 2,
+        name: 'MacBook Pro',
+        price: 550
+    }
+];
+
+if(localStorage.products) {
+    products = JSON.parse( localStorage.getItem('products') );
+} else {
+    localStorage.setItem('products', JSON.stringify(products));
+}
 
 // # 02
 /**
@@ -39,23 +62,7 @@ const allReducers = combineReducers({
  */
 const store = createStore(allReducers,
     {
-        products: [
-            {
-                i: 0,
-                name: 'iPad',
-                price: 75
-            },
-            {
-                i: 1,
-                name: 'iPhone',
-                price: 85
-            },
-            {
-                i: 2,
-                name: 'MacBook Pro',
-                price: 550
-            }
-        ],
+        products,
         user: 'Ali'
     },
     window.devToolsExtension && window.devToolsExtension()
