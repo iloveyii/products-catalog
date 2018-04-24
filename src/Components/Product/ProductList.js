@@ -18,9 +18,9 @@ class ProductList extends Component {
                         <ul className="list-group">
                             <li className="list-group-item list-group-item-success">
                                 <div className="form-inline">
-                                    <div className="col-sm"><strong>Item</strong></div>
-                                    <div className="col-sm"><strong>Price</strong></div>
-                                    <div className="col-sm text-center"><i className="fas fa-cogs"></i></div>
+                                    <div className="col-4"><strong>Item</strong></div>
+                                    <div className="col-4"><strong>Price</strong></div>
+                                    <div className="col-4 text-center"><i className="fas fa-cogs"></i></div>
                                 </div>
 
                             </li>

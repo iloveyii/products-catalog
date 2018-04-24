@@ -30,7 +30,9 @@ class App extends Component {
                     <ProductCatalog products={this.props.products} />
                 </div>
 
-                <footer></footer>
+                <footer>
+                    <hr/>
+                </footer>
             </div>
         );
     }
