@@ -38,11 +38,19 @@ export const ProductDeleteAction = product => {
 
 export const apiRequest  = () => {
     const request = axios.get('http://localhost:3000/data.json');
+
     return dispatch => {
+        dispatch({type: 'Product.Read.Start'});
         request.then((response)=>{
-            dispatch(
-                ProductReadAction(response.data)
-            );
+            if(Array.isArray(response.data)) {
+                dispatch({type: 'Product.Read.Success'});
+                dispatch( ProductReadAction(response.data) );
+            } else {
+                dispatch({type: 'Product.Read.Fail'});
+            }
+        }).catch(error=>{
+            dispatch({type: 'Product.Read.Fail', payload: { error} });
+            console.log('Error in read', error);
         });
     }
 };
