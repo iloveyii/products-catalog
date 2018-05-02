@@ -67,7 +67,7 @@ if(localStorage.products) {
  */
 const store = createStore(allReducers,
     {
-        products,
+        products: [],
         user: 'Ali'
     },
     allStoreEnhancers

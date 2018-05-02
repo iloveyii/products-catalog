@@ -13,11 +13,12 @@ class ProductList extends Component {
 
     componentDidMount() {
         const { apiRequest } = this.props;
-        apiRequest();
+        setTimeout(()=>{apiRequest();}, 1000);
+
     }
 
     render() {
-        if(this.props.products === undefined ) {
+        if(this.props.products === undefined ||  this.props.products.length < 1) {
             return <div>Loading...</div>
         }
         return(
