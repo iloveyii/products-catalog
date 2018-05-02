@@ -17,6 +17,9 @@ class ProductList extends Component {
     }
 
     render() {
+        if(this.props.products === undefined ) {
+            return <div>Loading...</div>
+        }
         return(
             <div className="row">
                 <div className="col-sm-10 offset-sm-1 text-left">

@@ -4,7 +4,7 @@ const ProductsReducer = (state=[], action) => {
 
     switch (action.type) {
         case 'Product.Create':
-            const lastProduct = products[products.length - 1];
+            const lastProduct = products.length ? products[products.length - 1] : { i: 0};
             const productArray = [{...action.payload.product, i : lastProduct.i + 1}];
             const productAdded = products.concat(productArray);
             localStorage.setItem('products', JSON.stringify(productAdded));
