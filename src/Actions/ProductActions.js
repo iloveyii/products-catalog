@@ -37,7 +37,10 @@ export const ProductDeleteAction = product => {
 };
 
 export const apiRequest  = () => {
-    const request = axios.get('http://localhost:3000/data.json');
+    const request = axios.get('http://localhost:3000/data.json',
+        {
+            headers: {"Access-Control-Allow-Origin":"*"}
+        });
 
     return dispatch => {
         dispatch({type: 'Product.Read.Start'});
