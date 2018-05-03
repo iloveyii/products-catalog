@@ -7,9 +7,6 @@ import { apiRequest } from '../../Actions/ProductActions';
 
 
 class ProductList extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     componentDidMount() {
         const { apiRequest } = this.props;

@@ -17,7 +17,7 @@ const ProductsReducer = (state=[], action) => {
         case 'Product.Update':
             // find the index of product that needs to be updated
             const index = products.findIndex( product => {
-                return product.i == action.payload.product.i
+                return product.i === action.payload.product.i
             });
 
             if(index > -1) {
@@ -29,7 +29,7 @@ const ProductsReducer = (state=[], action) => {
             return products;
 
         case 'Product.Delete':
-            const filteredProducts = products.filter( (product, key) => ( product.i == action.payload.product.i ? false : true) );
+            const filteredProducts = products.filter( (product, key) => ( product.i === action.payload.product.i ? false : true) );
             localStorage.setItem('products', JSON.stringify(filteredProducts));
             return filteredProducts;
 
