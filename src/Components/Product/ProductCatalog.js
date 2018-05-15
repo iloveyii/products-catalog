@@ -7,10 +7,8 @@ class ProductCatalog extends Component {
 
     render() {
         return(
-            <div>
-                <br/>
-                <h1>Product Catalog</h1>
-                <br/>
+            <div style={Styles.container}>
+                <h1 style={Styles.container.h1}>Product Catalog</h1>
                 <ProductForm />
                 <ProductList />
             </div>
@@ -18,6 +16,15 @@ class ProductCatalog extends Component {
         );
     }
 }
+
+const Styles = {
+    container: {
+        marginTop: '30px',
+        h1: {
+            marginBottom: '20px'
+        }
+    }
+};
 
 export default ProductCatalog;
 
