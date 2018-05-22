@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
+import { Link, Route } from 'react-router-dom';
 
 import ProductCatalog from './Components/Product/ProductCatalog';
+import Login from './Components/Product/Login';
 import { UserUpdateAction } from './Actions/UserActions';
 
 import logo from './logo.svg';
@@ -18,7 +20,7 @@ class App extends Component {
         this.props.UserUpdate('New User Alex');
     }
     render() {
-
+        const { props } = this.props;
         return (
             <div className="App">
                 <header className="App-header">
@@ -27,7 +29,15 @@ class App extends Component {
                 </header>
 
                 <div className="container">
-                    <ProductCatalog products={this.props.products} />
+                    <p>
+                        <br/>
+                        <Link className="btn btn-success" to="/products">Products</Link>
+                        &nbsp;
+                        <Link className="btn btn-primary" to="/login">Login</Link>
+                    </p>
+                    <Route exact path="/products" render={(props)=> (<ProductCatalog {...props} />) }/>
+                    <Route exact path="/login" component={Login} />
+
                 </div>
 
                 <footer>

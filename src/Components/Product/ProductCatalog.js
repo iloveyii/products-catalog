@@ -9,6 +9,8 @@ class ProductCatalog extends Component {
         return(
             <div style={Styles.container}>
                 <h1 style={Styles.container.h1}>Product Catalog</h1>
+                <p>
+                </p>
                 <ProductForm />
                 <ProductList />
             </div>

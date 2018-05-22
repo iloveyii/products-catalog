@@ -8,6 +8,7 @@ import { applyMiddleware, compose, combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
+import { BrowserRouter } from 'react-router-dom';
 
 // # 01
 /**
@@ -87,6 +88,11 @@ const store = createStore(allReducers,
 /**
  * Interestingly a newline before Provider, App causes errors
  */
-ReactDOM.render(<Provider store={store}><App /></Provider>,
-    document.getElementById('root'));
+ReactDOM.render((
+    <BrowserRouter>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </BrowserRouter>
+), document.getElementById('root'));
 registerServiceWorker();
