@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { Link, Route } from 'react-router-dom';
+import { Link, Route, withRouter } from 'react-router-dom';
 
 import ProductCatalog from './Components/Product/ProductCatalog';
 import Login from './Components/Product/Login';
@@ -35,8 +35,8 @@ class App extends Component {
                         &nbsp;
                         <Link className="btn btn-primary" to="/login">Login</Link>
                     </p>
-                    <Route exact path="/products" render={(props)=> (<ProductCatalog {...props} />) }/>
-                    <Route exact path="/login" component={Login} />
+                    <Route path="/products" render={(props)=> (<ProductCatalog {...props} />) }/>
+                    <Route path="/login" component={Login} />
 
                 </div>
 
@@ -67,4 +67,4 @@ const mapActionsToProps = {
     UserUpdate: UserUpdateAction
 };
 
-export default connect(mapStateToProps, mapActionsToProps)(App);
+export default withRouter(connect(mapStateToProps, mapActionsToProps)(App));
