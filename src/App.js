@@ -31,9 +31,11 @@ class App extends Component {
                 <div className="ui container">
                     <div className="ui three item menu">
                         <br/>
+                        <Link className="item" to="/login">Login</Link>
+                        &nbsp;
                         <Link className="item" to="/products">Products</Link>
                         &nbsp;
-                        <Link className="item" to="/login">Login</Link>
+                        <Link className="item" to="/markets">Markets</Link>
                     </div>
                     <Route path="/products" render={(props)=> (<ProductCatalog {...props} />) }/>
                     <Route path="/login" component={Login} />

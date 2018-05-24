@@ -37,7 +37,7 @@ export const ProductDeleteAction = product => {
 };
 
 export const apiRequest  = () => {
-    const request = axios.get('/data.json',
+    const request = axios.get('/markets.json',
         {
             headers: {"Access-Control-Allow-Origin":"*"}
         });

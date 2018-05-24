@@ -1,0 +1,1058 @@
+[
+    {
+      "type": "customSessionOrders",
+      "id": "795",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1246",
+        "runner-id": "0",
+        "order-id": "795",
+        "place-date": "2018-05-15T13:53:42.082821Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 795,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "794",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1246",
+        "runner-id": "0",
+        "order-id": "794",
+        "place-date": "2018-05-15T13:53:36.799537Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 794,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "793",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1245",
+        "runner-id": "0",
+        "order-id": "793",
+        "place-date": "2018-05-15T13:52:00.391511Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 793,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "792",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1245",
+        "runner-id": "0",
+        "order-id": "792",
+        "place-date": "2018-05-15T13:51:53.598573Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 792,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "791",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1243",
+        "runner-id": "0",
+        "order-id": "791",
+        "place-date": "2018-05-15T13:51:23.727712Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 791,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "790",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1243",
+        "runner-id": "0",
+        "order-id": "790",
+        "place-date": "2018-05-15T13:51:23.300679Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 790,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "789",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1243",
+        "runner-id": "0",
+        "order-id": "789",
+        "place-date": "2018-05-15T13:51:23.052426Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 789,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "788",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1243",
+        "runner-id": "0",
+        "order-id": "788",
+        "place-date": "2018-05-15T13:51:22.432974Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 788,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "787",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1243",
+        "runner-id": "0",
+        "order-id": "787",
+        "place-date": "2018-05-15T13:51:22.115978Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 787,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "786",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1243",
+        "runner-id": "0",
+        "order-id": "786",
+        "place-date": "2018-05-15T13:51:21.314467Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 786,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "784",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1243",
+        "runner-id": "0",
+        "order-id": "784",
+        "place-date": "2018-05-15T13:50:18.033256Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 784,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "783",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1243",
+        "runner-id": "0",
+        "order-id": "783",
+        "place-date": "2018-05-15T13:50:07.768578Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 783,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "782",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1243",
+        "runner-id": "0",
+        "order-id": "782",
+        "place-date": "2018-05-15T13:49:06.552573Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 782,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "781",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1243",
+        "runner-id": "0",
+        "order-id": "781",
+        "place-date": "2018-05-15T13:49:01.792618Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 781,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "780",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1243",
+        "runner-id": "0",
+        "order-id": "780",
+        "place-date": "2018-05-15T13:48:57.581253Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 780,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "779",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1242",
+        "runner-id": "0",
+        "order-id": "779",
+        "place-date": "2018-05-15T13:48:31.727894Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 779,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "778",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1242",
+        "runner-id": "0",
+        "order-id": "778",
+        "place-date": "2018-05-15T13:48:22.014855Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 778,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "777",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1240",
+        "runner-id": "0",
+        "order-id": "777",
+        "place-date": "2018-05-15T13:48:05.958038Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 777,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "776",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1240",
+        "runner-id": "0",
+        "order-id": "776",
+        "place-date": "2018-05-15T13:48:02.151144Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 776,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "774",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1239",
+        "runner-id": "0",
+        "order-id": "774",
+        "place-date": "2018-05-15T13:26:22.615539Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 774,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "773",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1229",
+        "runner-id": "0",
+        "order-id": "773",
+        "place-date": "2018-05-15T13:08:39.226581Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 773,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "772",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1229",
+        "runner-id": "0",
+        "order-id": "772",
+        "place-date": "2018-05-15T13:08:30.157788Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 772,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "771",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1234",
+        "runner-id": "0",
+        "order-id": "771",
+        "place-date": "2018-05-15T12:45:55.556657Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 771,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "770",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1224",
+        "runner-id": "0",
+        "order-id": "770",
+        "place-date": "2018-05-15T12:34:41.913059Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 770,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "769",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1218",
+        "runner-id": "0",
+        "order-id": "769",
+        "place-date": "2018-05-15T12:34:09.561973Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 769,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "768",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1218",
+        "runner-id": "0",
+        "order-id": "768",
+        "place-date": "2018-05-15T12:34:08.608392Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 768,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "767",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1218",
+        "runner-id": "0",
+        "order-id": "767",
+        "place-date": "2018-05-15T12:34:07.876229Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 767,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "766",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1218",
+        "runner-id": "0",
+        "order-id": "766",
+        "place-date": "2018-05-15T12:34:06.107751Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 766,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "765",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1218",
+        "runner-id": "0",
+        "order-id": "765",
+        "place-date": "2018-05-15T12:34:02.523595Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 765,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "764",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1218",
+        "runner-id": "0",
+        "order-id": "764",
+        "place-date": "2018-05-15T12:33:52.827219Z",
+        "runner": {
+          "market": {
+            "event": {},
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 764,
+          "status": "B",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "763",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1211",
+        "runner-id": "0",
+        "order-id": "763",
+        "place-date": "2018-05-15T09:22:21.178745Z",
+        "runner": {
+          "market": {
+            "event": {
+              "id": 1793,
+              "name": "Djurgardens v Orebro",
+              "start-time": "2018-05-17T17:00:00Z"
+            },
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 763,
+          "status": "A",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [
+            {
+              "id": 414,
+              "orderId": "763",
+              "status": false,
+              "isActive": "A",
+              "conditionValue": "[{\"value\":40}]",
+              "eventId": 1793,
+              "created": "2018-05-15T09:22:19.352222Z",
+              "modified": "2018-05-15T09:22:19.352223Z",
+              "conditionId": "6"
+            }
+          ],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "759",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1206",
+        "runner-id": "0",
+        "order-id": "759",
+        "place-date": "2018-05-15T09:19:18.237412Z",
+        "runner": {
+          "market": {
+            "event": {
+              "id": 1794,
+              "name": "Hammarby v Malmo FF",
+              "start-time": "2018-05-16T17:00:00Z"
+            },
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 759,
+          "status": "A",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [
+            {
+              "id": 410,
+              "orderId": "759",
+              "status": false,
+              "isActive": "A",
+              "conditionValue": "[{\"value\":55}]",
+              "eventId": 1794,
+              "created": "2018-05-15T09:19:17.09655Z",
+              "modified": "2018-05-15T09:19:17.096551Z",
+              "conditionId": "7"
+            }
+          ],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "758",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1195",
+        "runner-id": "0",
+        "order-id": "758",
+        "place-date": "2018-05-15T06:44:32.211469Z",
+        "runner": {
+          "market": {
+            "event": {
+              "id": 1792,
+              "name": "Brommapojkarna v Kalmar FF",
+              "start-time": "2018-05-18T17:00:00Z"
+            },
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 758,
+          "status": "A",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [
+            {
+              "id": 409,
+              "orderId": "758",
+              "status": false,
+              "isActive": "A",
+              "conditionValue": "[{\"value\":1},{\"value\":2}]",
+              "eventId": 1792,
+              "created": "2018-05-15T06:44:30.832073Z",
+              "modified": "2018-05-15T06:44:30.832074Z",
+              "conditionId": "9"
+            }
+          ],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "type": "customSessionOrders",
+      "id": "757",
+      "attributes": {
+        "price": "0.00",
+        "session-id": "1194",
+        "runner-id": "157987",
+        "order-id": "757",
+        "place-date": "2018-05-15T06:43:51.904304Z",
+        "runner": {
+          "id": 157987,
+          "name": "Under 2.5 Goals",
+          "status": "Under 2.5 Goals",
+          "market": {
+            "id": 7083,
+            "name": "over/under 2.5 goals",
+            "display-name": "Over/under 2.5 goals",
+            "event": {
+              "id": 1794,
+              "name": "Hammarby v Malmo FF",
+              "start-time": "2018-05-16T17:00:00Z"
+            },
+            "runners": null
+          },
+          "current-odds": ""
+        },
+        "order": {
+          "id": 757,
+          "status": "F",
+          "stake": 0,
+          "user-modified": "0001-01-01T00:00:00Z",
+          "runner-id": 0,
+          "triggers": [
+            {
+              "id": 408,
+              "orderId": "757",
+              "status": true,
+              "isActive": "D",
+              "conditionValue": "[{\"value\":1.01}]",
+              "eventId": 1794,
+              "created": "2018-05-15T06:43:49.869753Z",
+              "modified": "2018-05-15T06:43:49.869754Z",
+              "conditionId": "13"
+            }
+          ],
+          "actions": null,
+          "created": "0001-01-01T00:00:00Z",
+          "modified": "0001-01-01T00:00:00Z"
+        }
+      }
+    }
+  ]
