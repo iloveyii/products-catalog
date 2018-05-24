@@ -28,13 +28,13 @@ class App extends Component {
                     <h1 className="App-title">Welcome to React</h1>
                 </header>
 
-                <div className="container">
-                    <p>
+                <div className="ui container">
+                    <div className="ui three item menu">
                         <br/>
-                        <Link className="btn btn-success" to="/products">Products</Link>
+                        <Link className="item" to="/products">Products</Link>
                         &nbsp;
-                        <Link className="btn btn-primary" to="/login">Login</Link>
-                    </p>
+                        <Link className="item" to="/login">Login</Link>
+                    </div>
                     <Route path="/products" render={(props)=> (<ProductCatalog {...props} />) }/>
                     <Route path="/login" component={Login} />
 

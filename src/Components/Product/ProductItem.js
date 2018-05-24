@@ -51,8 +51,8 @@ class ProductItem extends Component {
                                 <input type="text" className="form-control" placeholder="Enter product price" defaultValue={product.price} ref={priceInput => this.priceInput = priceInput} />
                             </div>
                             <div className="col-sm text-right">
-                                <button onClick={this.onSave} className="btn btn-primary mx-sm-3 mb-2">Save</button>
-                                <button onClick={this.onCancel} className="btn btn-warn mx-sm-3 mb-2">Cancel</button>
+                                <button onClick={this.onSave} className="ui violet button">Save</button>
+                                <button onClick={this.onCancel} className="ui gray button">Cancel</button>
                             </div>
                         </div>
                     </li>
@@ -63,8 +63,8 @@ class ProductItem extends Component {
                         <div className="col-sm">{ product.name }</div>
                         <div className="col-sm">{product.price}</div>
                         <div className="col-sm text-right">
-                            <button onClick={this.onEdit} className="btn btn-success mx-sm-3 mb-2">Edit</button>
-                            <button onClick={ this.onDelete } className="btn btn-danger mx-sm-3 mb-2">Delete</button>
+                            <button onClick={this.onEdit} className="ui green button">Edit</button>
+                            <button onClick={ this.onDelete } className="ui red button">Delete</button>
                         </div>
                         </div>
                     </li>

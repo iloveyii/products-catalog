@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -20,6 +21,7 @@ class ProductForm extends Component {
     constructor(props) {
         super(props);
         this.handleOnSubmit = this.handleOnSubmit.bind(this);
+        this.handleClickPush = this.handleClickPush.bind(this);
     }
 
     handleOnSubmit(event) {
@@ -32,21 +34,33 @@ class ProductForm extends Component {
             this.priceInput.value = '';
             this.nameInput.focus();
         }
+    }
 
+    handleClickPush(e) {
+        e.preventDefault();
+        this.props.history.push('/login');
     }
 
     render() {
         return(
             <div className="row">
                 <div className="col-sm-10 offset-sm-1 text-center">
-                    <form className="form-inline justify-content-center" onSubmit={this.handleOnSubmit}>
-                        <div className="form-group mb-2">
-                            <input type="text" className="form-control" placeholder="Enter product name" ref={nameInput => this.nameInput = nameInput} />
+                    <form className="ui form" onSubmit={this.handleOnSubmit}>
+                        <div className="field">
+                            <div className="three fields">
+                                <div className="field">
+                                    <input type="text" className="form-control" placeholder="Enter product name" ref={nameInput => this.nameInput = nameInput} />
+                                </div>
+                                <div className="field">
+                                    <input type="text" className="form-control" placeholder="Enter product price" ref={priceInput => this.priceInput = priceInput} />
+                                </div>
+                                <div className="field">
+                                    <button className="ui primary button">Add</button>
+                                    <button onClick={this.handleClickPush} className="ui pink button">Push to login</button>
+                                </div>
+                            </div>
                         </div>
-                        <div className="form-group mx-sm-3 mb-2">
-                            <input type="text" className="form-control" placeholder="Enter product price" ref={priceInput => this.priceInput = priceInput} />
-                        </div>
-                        <button className="btn btn-primary mb-2">Add</button>
+
                     </form>
                     <hr/>
                 </div>
@@ -69,4 +83,4 @@ const mapActionsToProps = {
     ProductDeleteAction
 };
 
-export default connect(mapStateToProps, mapActionsToProps)(ProductForm);
+export default withRouter(connect(mapStateToProps, mapActionsToProps)(ProductForm));
