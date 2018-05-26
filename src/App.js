@@ -2,9 +2,10 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { Link, Route, withRouter } from 'react-router-dom';
 
+import { UserUpdateAction } from './Actions/UserActions';
 import ProductCatalog from './Components/Product/ProductCatalog';
 import Login from './Components/Product/Login';
-import { UserUpdateAction } from './Actions/UserActions';
+import TriggerList from './Components/Trigger/TriggerList';
 
 import logo from './logo.svg';
 import './App.css';
@@ -12,15 +13,9 @@ import './App.css';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.update = this.update.bind(this);
     }
 
-    update() {
-        console.log(this.props, 'new user alex');
-        this.props.UserUpdate('New User Alex');
-    }
     render() {
-        const { props } = this.props;
         return (
             <div className="App">
                 <header className="App-header">
@@ -35,10 +30,11 @@ class App extends Component {
                         &nbsp;
                         <Link className="item" to="/products">Products</Link>
                         &nbsp;
-                        <Link className="item" to="/markets">Markets</Link>
+                        <Link className="item" to="/trigger">Trigger</Link>
                     </div>
                     <Route path="/products" render={(props)=> (<ProductCatalog {...props} />) }/>
                     <Route path="/login" component={Login} />
+                    <Route path="/trigger" component={TriggerList} />
 
                 </div>
 
@@ -65,8 +61,6 @@ const mapStateToProps = state => (
  * Import action from dir action above - but must be passed to connect method in order to trigger reducer in store
  * @type {{UserUpdate: UserUpdateAction}}
  */
-const mapActionsToProps = {
-    UserUpdate: UserUpdateAction
-};
+const mapActionsToProps = {};
 
 export default withRouter(connect(mapStateToProps, mapActionsToProps)(App));

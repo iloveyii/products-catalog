@@ -9,9 +9,9 @@ export const ProductCreateAction = newProduct => {
     }
 };
 
-export const ProductReadAction = products => {
+export const ProductReadActionSuccess = products => {
     return {
-        type: 'Product.Read',
+        type: 'Product.Read.Success',
         payload: {
             products: products
         }
@@ -37,7 +37,7 @@ export const ProductDeleteAction = product => {
 };
 
 export const apiRequest  = () => {
-    const request = axios.get('/markets.json',
+    const request = axios.get('/data.json',
         {
             headers: {"Access-Control-Allow-Origin":"*"}
         });
@@ -46,8 +46,7 @@ export const apiRequest  = () => {
         dispatch({type: 'Product.Read.Start'});
         request.then((response)=>{
             if(Array.isArray(response.data)) {
-                dispatch({type: 'Product.Read.Success'});
-                dispatch( ProductReadAction(response.data) );
+                dispatch( ProductReadActionSuccess(response.data) );
             } else {
                 dispatch({type: 'Product.Read.Fail'});
             }

@@ -21,13 +21,15 @@ import { BrowserRouter } from 'react-router-dom';
  */
 import ProductsReducer from './Reducers/ProductsReducer';
 import UserReducer from './Reducers/UserReducer';
+import TriggersReducer from './Reducers/TriggersReducer';
 /**
  * Action is an object with format of type and payload
  * @type {{type: string, payload: {newState: string}}}
  */
 const allReducers = combineReducers({
     products: ProductsReducer,
-    user: UserReducer
+    user: UserReducer,
+    triggers: TriggersReducer,
 });
 
 const allStoreEnhancers = compose(
@@ -66,7 +68,8 @@ if(localStorage.products) {
  * Last param is for redux debug in chrome extension
  * @type {Store<S&StateExt>&Ext}
  */
-const store = createStore(allReducers,
+const store = createStore(
+    allReducers,
     {
         products: [],
         user: 'Ali'

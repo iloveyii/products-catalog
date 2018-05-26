@@ -11,7 +11,7 @@ const ProductsReducer = (state=[], action) => {
 
             return productAdded;
 
-        case 'Product.Read':
+        case 'Product.Read.Success':
             return action.payload.products.slice(0);
 
         case 'Product.Update':
@@ -34,7 +34,7 @@ const ProductsReducer = (state=[], action) => {
             return filteredProducts;
 
         default:
-            return state;
+            return products;
     }
 };
 

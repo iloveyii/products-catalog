@@ -2,6 +2,9 @@ import React from 'react';
 
 
 export default class Login extends React.Component {
+    componentDidMount() {
+        console.log('Login component did mount');
+    }
     render() {
         return(
             <div className="row">
