@@ -23,7 +23,8 @@ class ProductForm extends Component {
         this.state = {
             name: '',
             price: '',
-            errors: {}
+            errors: {},
+            loading: false
         };
         this.handleOnSubmit = this.handleOnSubmit.bind(this);
         this.handleClickPush = this.handleClickPush.bind(this);
@@ -32,6 +33,7 @@ class ProductForm extends Component {
 
     handleChange(e) {
         this.setState({[e.target.name] : e.target.value});
+
         if(!!this.state.errors[e.target.name]) {
             let errors = Object.assign({}, this.state.errors);
             delete errors[e.target.name];
@@ -49,7 +51,9 @@ class ProductForm extends Component {
         this.setState({errors});
 
         if( Object.keys(errors).length === 0) {
+            this.setState({loading: true});
             ProductCreateAction({name: this.nameInput.value, price: this.priceInput.value});
+            setTimeout(() => this.setState({loading: false}), 500, this);
 
             this.nameInput.value = '';
             this.priceInput.value = '';
@@ -67,7 +71,7 @@ class ProductForm extends Component {
         return(
             <div className="row">
                 <div className="col-sm-10 offset-sm-1 text-center">
-                    <form className="ui form" onSubmit={this.handleOnSubmit}>
+                    <form className={`ui form ${this.state.loading ? 'loading': ''}`} onSubmit={this.handleOnSubmit}>
                         <div className="three fields">
                             <div className={`field${this.state.errors.name ? ' error' : ''}`}>
                                 <input type="text" name="name" onChange={this.handleChange} placeholder="Enter product name" ref={nameInput => this.nameInput = nameInput} />
