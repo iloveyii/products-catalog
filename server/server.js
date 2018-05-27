@@ -30,6 +30,11 @@ MongoClient.connect(dbUrl, function (err, db) {
         });
     });
 
+    app.delete('/api/v1/products/:id', (req, res) => {
+        var item = db.collection('triggers').findOneAndDelete( {"_id": req.params.id} );
+        console.log('Deleting: ', {_id: req.params.id});
+        res.send('200', JSON.stringify(item));
+    });
 
     // app.use((req, res) => {
     //     console.log('Request last:', req.url)
