@@ -10,7 +10,7 @@ app.listen(4000, () => console.log('Express server started listening on port 400
 
 MongoClient.connect(dbUrl, function (err, db) {
     console.log('Mongodb connected');
-    app.get('/api/v1/products', (req, res) => {
+    app.get('/api/v1/products', (req, res, next) => {
         console.log('Request: /api/v1/products');
         db.collection('triggers').find( {}).toArray( (err, triggers) => {
             res.json(triggers);
@@ -26,14 +26,14 @@ MongoClient.connect(dbUrl, function (err, db) {
     });
 
 
-    app.use((req, res) => {
-        console.log('Request:', req.url)
-        res.status(404).json({
-            errors: {
-                global: 'Some error, Don\'t worry a group of monkeys has been dispatched to fix it as soon as possible.'
-            }
-        })
-    })
+    // app.use((req, res) => {
+    //     console.log('Request last:', req.url)
+    //     res.status(200).json({
+    //         errors: {
+    //             global: 'Some error, Don\'t worry a group of monkeys has been dispatched to fix it as soon as possible.'
+    //         }
+    //     })
+    // })
 
 });
 
