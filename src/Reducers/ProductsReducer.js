@@ -29,7 +29,7 @@ const ProductsReducer = (state=[], action) => {
             return products;
 
         case 'Product.Delete':
-            const filteredProducts = products.filter( (product, key) => ( product.i === action.payload.product.i ? false : true) );
+            const filteredProducts = products.filter( (product, key) => ( product._id === action.payload.product._id ? false : true) );
             localStorage.setItem('products', JSON.stringify(filteredProducts));
             return filteredProducts;
 
