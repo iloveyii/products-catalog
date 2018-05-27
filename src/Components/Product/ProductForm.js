@@ -58,6 +58,7 @@ class ProductForm extends Component {
             this.nameInput.value = '';
             this.priceInput.value = '';
             this.nameInput.focus();
+            this.setState({name: '', price:''});
         }
 
     }
