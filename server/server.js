@@ -15,6 +15,11 @@ app.use(function(req, res, next) {
 
 MongoClient.connect(dbUrl, function (err, db) {
     console.log('Mongodb connected');
+    app.post('/api/v1/login', (req, res, next) => {
+        console.log('Got login');
+        res.json(res.params);
+    });
+
     app.get('/api/v1/products', (req, res, next) => {
         console.log('Request: /api/v1/products');
         db.collection('triggers').find( {}).toArray( (err, triggers) => {

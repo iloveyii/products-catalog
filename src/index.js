@@ -6,9 +6,11 @@ import registerServiceWorker from './registerServiceWorker';
 
 import { applyMiddleware, compose, combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
+import createSagaMiddleware from 'redux-saga';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import { BrowserRouter } from 'react-router-dom';
+import { USER_LOGIN } from './Types/Login';
 
 // # 01
 /**
@@ -22,6 +24,7 @@ import { BrowserRouter } from 'react-router-dom';
 import ProductsReducer from './Reducers/ProductsReducer';
 import UserReducer from './Reducers/UserReducer';
 import TriggersReducer from './Reducers/TriggersReducer';
+import rootSaga from './Sagas/rootSaga';
 /**
  * Action is an object with format of type and payload
  * @type {{type: string, payload: {newState: string}}}
@@ -31,11 +34,15 @@ const allReducers = combineReducers({
     user: UserReducer,
     triggers: TriggersReducer,
 });
+const sagaMiddleware = createSagaMiddleware();
 
 const allStoreEnhancers = compose(
-    applyMiddleware(thunk, logger),
+    applyMiddleware(
+        sagaMiddleware,
+        logger),
     window.devToolsExtension && window.devToolsExtension()
 );
+
 
 let products = [
     {
@@ -76,6 +83,7 @@ const store = createStore(
     },
     allStoreEnhancers
 );
+sagaMiddleware.run(rootSaga);
 
 /**
  * You can see the status of store - but only data and not reducers
@@ -86,7 +94,7 @@ const store = createStore(
 /**
  * Dispatch action to store
  */
-// store.dispatch(UserUpdateAction);
+store.dispatch({type: USER_LOGIN});
 
 /**
  * Interestingly a newline before Provider, App causes errors

@@ -7,3 +7,11 @@ export const UserUpdateAction = newUser => {
         }
     }
 };
+
+export const userLoggedInAction = token => {
+    console.log(token);
+    return {
+        type : 'User.LoggedIn',
+        token
+    }
+}

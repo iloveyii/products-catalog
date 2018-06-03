@@ -4,7 +4,7 @@ import { Link, Route, withRouter } from 'react-router-dom';
 
 import { UserUpdateAction } from './Actions/UserActions';
 import ProductCatalog from './Components/Product/ProductCatalog';
-import Login from './Components/Product/Login';
+import Login from './Components/Login/Login';
 import TriggerList from './Components/Trigger/TriggerList';
 
 import logo from './logo.svg';
