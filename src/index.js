@@ -43,7 +43,6 @@ const allStoreEnhancers = compose(
     window.devToolsExtension && window.devToolsExtension()
 );
 
-
 let products = [
     {
         i: 0,
@@ -94,7 +93,7 @@ sagaMiddleware.run(rootSaga);
 /**
  * Dispatch action to store
  */
-store.dispatch({type: USER_LOGIN});
+// store.dispatch({type: USER_LOGIN});
 
 /**
  * Interestingly a newline before Provider, App causes errors

@@ -1,3 +1,5 @@
+import { USER_LOGIN, USER_LOGIN_SUCCESS } from '../Types/Login';
+
 export const UserUpdateAction = newUser => {
     console.log('Inside UserUpdateAction');
     return {
@@ -8,10 +10,16 @@ export const UserUpdateAction = newUser => {
     }
 };
 
-export const userLoggedInAction = token => {
+export const userLogInAction = user => ({
+    type : USER_LOGIN,
+    user
+});
+
+export const userLogInSuccessAction = token => {
+    console.log('Got userLoggedInAction')
     console.log(token);
     return {
-        type : 'User.LoggedIn',
+        type : USER_LOGIN_SUCCESS,
         token
     }
-}
+};

@@ -1,9 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { userLogInAction } from '../../Actions/UserActions';
 
 
-export default class Login extends React.Component {
+export class Login extends React.Component {
     componentDidMount() {
         console.log('Login component did mount');
+        const user = { username: 'alex', password: 'pass'};
+        this.props.userLogInAction({user});
     }
     render() {
         return(
@@ -54,3 +58,13 @@ export default class Login extends React.Component {
         );
     }
 }
+
+const mapStateToProps = state => ({
+
+});
+
+const mapActionsToProps = {
+    userLogInAction
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(Login);

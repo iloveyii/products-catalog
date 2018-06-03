@@ -1,6 +1,6 @@
 import { call, put } from 'redux-saga/effects';
 import api from '../Api/users';
-import { userLoggedInAction } from '../Actions/UserActions';
+import { userLogInSuccessAction } from '../Actions/UserActions';
 
 export function* userCreateSaga(action) {
     const user = yield call(api.users.signup, action.user);
@@ -14,5 +14,5 @@ export function* userCreateSuccessSaga(user) {
 export function* userLoginSaga(action) {
     const user = yield call(api.user.login, action.credentials);
     localStorage.bookwormJWT = user.token;
-    yield put(userLoggedInAction(user));
+    yield put(userLogInSuccessAction(user));
 }
