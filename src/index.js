@@ -38,6 +38,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 const allStoreEnhancers = compose(
     applyMiddleware(
+        thunk,
         sagaMiddleware,
         logger),
     window.devToolsExtension && window.devToolsExtension()
