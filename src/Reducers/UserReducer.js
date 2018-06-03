@@ -6,7 +6,7 @@ const UserReducer = (state = '', action) => {
             return action.payload.user;
 
         case USER_LOGIN_SUCCESS:
-            return {...state, token: action.token}
+            return {state, token: action.token}
         default:
             return state;
     }

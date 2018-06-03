@@ -1,5 +1,8 @@
 const express = require('express');
 const MongoClient = require('mongodb').MongoClient;
+const bodyParser = require('body-parser');
+
+
 
 const dbUrl = 'mongodb://localhost/products';
 
@@ -12,13 +15,35 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+    extended: true
+}));
 
 MongoClient.connect(dbUrl, function (err, db) {
     console.log('Mongodb connected');
     app.post('/api/v1/login', (req, res, next) => {
         console.log('Got login');
-        const user = { token : 'randome-token'};
-        res.json({user});
+        const users = [
+            {
+                email : 'ali@test.com',
+                password : '123',
+                token: '123123'
+            },
+            {
+                email: 'alex@test.com',
+                password: '1234',
+                token: '12341234'
+            }
+        ];
+
+        const { email, password } = req.body.credentials;
+        const user = users.find( user => user.email == email && user.password == password);
+        if(user) {
+            res.json({user});
+        } else {
+            res.json({message: 'Cannot find user'});
+        }
     });
 
     app.get('/api/v1/products', (req, res, next) => {

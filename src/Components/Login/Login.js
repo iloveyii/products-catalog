@@ -22,9 +22,9 @@ export class Login extends React.Component {
     userLogin(e) {
         e.preventDefault();
         console.log(e.target);
-        const user = this.state.data;
-        console.log(user);
-        this.props.userLogInAction({user});
+        const credentials = this.state.data;
+        console.log(credentials);
+        this.props.userLogInAction(credentials);
     }
 
     render() {

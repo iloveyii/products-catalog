@@ -10,16 +10,18 @@ export const UserUpdateAction = newUser => {
     }
 };
 
-export const userLogInAction = user => ({
+export const userLogInAction = credentials => {
+    console.log('inside action crdecntinls: ', credentials.email)
+    return {
     type : USER_LOGIN,
-    user
-});
+    credentials
+} };
 
-export const userLogInSuccessAction = token => {
+export const userLogInSuccessAction = user => {
     console.log('Got userLoggedInAction')
-    console.log(token);
+    console.log(user);
     return {
         type : USER_LOGIN_SUCCESS,
-        token
+        token : user.token
     }
 };
