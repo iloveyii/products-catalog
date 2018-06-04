@@ -38,12 +38,12 @@ MongoClient.connect(dbUrl, function (err, db) {
         ];
 
         const { email, password } = req.body.credentials;
-        const user = users.find( user => user.email == email && user.password == password);
-        if(user) {
-            res.json({user});
-        } else {
-            res.json({message: 'Cannot find user'});
+        let user = users.find( user => user.email == email && user.password == password);
+        // res.status(400).json({ errors: 'Email not found'});
+        if(!user) {
+            user = {serverErrors: 'Invalid email or password.'};
         }
+        res.json({user});
     });
 
     app.get('/api/v1/products', (req, res, next) => {

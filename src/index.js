@@ -77,10 +77,7 @@ if(localStorage.products) {
  */
 const store = createStore(
     allReducers,
-    {
-        products: [],
-        user: 'Ali'
-    },
+    {},
     allStoreEnhancers
 );
 sagaMiddleware.run(rootSaga);

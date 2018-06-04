@@ -1,4 +1,4 @@
-import { USER_LOGIN, USER_LOGIN_SUCCESS } from '../Types/Login';
+import {USER_LOGIN, USER_LOGIN_FAIL, USER_LOGIN_SUCCESS} from '../Types/Login';
 
 export const UserUpdateAction = newUser => {
     console.log('Inside UserUpdateAction');
@@ -17,11 +17,15 @@ export const userLogInAction = credentials => {
     credentials
 } };
 
-export const userLogInSuccessAction = user => {
-    console.log('Got userLoggedInAction')
-    console.log(user);
+export const userLogInSuccessAction = user => ({
+    type : USER_LOGIN_SUCCESS,
+    token : user.token
+});
+
+export const userLogInFailAction = serverErrors =>  {
+    console.log('Inside userLogInFailAction', serverErrors);
     return {
-        type : USER_LOGIN_SUCCESS,
-        token : user.token
+        type: USER_LOGIN_FAIL,
+        serverErrors: serverErrors
     }
 };
